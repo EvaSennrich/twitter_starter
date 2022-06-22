@@ -10,7 +10,7 @@ export default function App() {
   const [userProfile, setUserProfile] = useState(codepathUserProfile);
   const [tweets, setTweets] = useState([firstTweet]);
 
-  // userProfile = navLinks.codepathUserProfile;
+  // userProfile = navLinks.codepathUserProfile;~
 
   return (
     <div className="app">
@@ -18,7 +18,7 @@ export default function App() {
       <main>
         <UserProfile userProfile={userProfile} />
         {/* ---ASK TO EXPLAIN THESE PROPS YOU'RE PASSING FROM FEED COMPONENT SPREAD OPERATOR???-- */}
-        <Feed tweet={tweets} setTweets={setTweets} userProfile={userProfile} />
+        <Feed tweets={tweets} setTweets={setTweets} userProfile={userProfile} />
         <Advertisements />
       </main>
     </div>
