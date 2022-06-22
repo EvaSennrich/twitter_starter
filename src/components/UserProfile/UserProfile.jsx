@@ -1,20 +1,28 @@
-import * as React from "react"
-import { formatNumTweets, formatNumFollowers } from "../../utils/format"
-import "./UserProfile.css"
+import * as React from "react";
+import { useEffect } from "react";
+import { formatNumTweets, formatNumFollowers } from "../../utils/format";
+import "./UserProfile.css";
 
 export default function UserProfile({ userProfile }) {
+  // useEffect(() => {
+  //   console.log("-->", userProfile.numTweets);
+  // }, []);
+
   return (
     <div className="col user-profile">
       <div className="card">
         <div className="card-bg" />
-        <CardContent />
-        <CardFooter />
+        <CardContent name={userProfile.name} handle={userProfile.handle} />
+        <CardFooter numTweets={userProfile.numTweets} numFollowers={userProfile.numFollowers} />
       </div>
     </div>
-  )
+  );
 }
 
 export function CardContent(props) {
+  // useEffect(() => {
+  //   console.log("-->", props.name);
+  // }, []);
   return (
     <div className="card-content">
       <span className="fa-stack add-picture-icon">
@@ -27,7 +35,7 @@ export function CardContent(props) {
         <p>@{props.handle}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export function CardFooter(props) {
@@ -38,5 +46,5 @@ export function CardFooter(props) {
       <span className="metric">{props.numTweets ? formatNumTweets(props.numTweets) : null}</span>
       <span className="metric">{props.numFollowers ? formatNumFollowers(props.numFollowers) : null}</span>
     </div>
-  )
+  );
 }

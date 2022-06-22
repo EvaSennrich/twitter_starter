@@ -4,9 +4,9 @@ import "./Navbar.css";
 import { useEffect } from "react";
 
 export default function Navbar({ navLinks }) {
-  useEffect(() => {
-    console.log("navbar works");
-  }, []);
+  // useEffect(() => {
+  //   console.log("navbar works");
+  // }, []);
   return (
     <nav>
       <div className="navbar-container">
@@ -20,9 +20,9 @@ export default function Navbar({ navLinks }) {
 }
 
 export function NavLinks({ navLinks }) {
-  useEffect(() => {
-    console.log("navLINKS works");
-  }, []);
+  // useEffect(() => {
+  //   console.log("navLINKS works");
+  // }, []);
   return (
     <ul className="nav-links">
       {navLinks.map((link, key) => {
@@ -33,9 +33,9 @@ export function NavLinks({ navLinks }) {
 }
 
 export function NavLink({ navLink }) {
-  useEffect(() => {
-    console.log("navLIIINKKKK works");
-  }, []);
+  // useEffect(() => {
+  //   console.log("navLIIINKKKK works");
+  // }, []);
   return (
     <li className={navLink.className}>
       <i className={navLink.icon}></i>
