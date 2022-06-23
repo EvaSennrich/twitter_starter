@@ -7,9 +7,10 @@ export default function Feed(props) {
   return (
     <div className="col feed">
       {/* UPDATE TWEET BOX PROPS HERE */}
+
+      {/* Pass both the tweetText and setTweetText props from the Feed component down into the TweetBox component. */}
       {/* spread operator */}
       <TweetBox {...props} />
-
       <div className="see-new-tweets beet">
         <p>
           See <span>{13}</span> New Tweets
